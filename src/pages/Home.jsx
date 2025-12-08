@@ -1,10 +1,35 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { partners, products, references, services, solutions } from '../data/content';
 
 export function Home() {
+  const heroImages = [
+    'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80',
+    'https://images.unsplash.com/photo-1518773553398-650c184e0bb3?auto=format&fit=crop&w=1600&q=80',
+    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80'
+  ];
+
+  const [bgIndex, setBgIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBgIndex((current) => (current + 1) % heroImages.length);
+    }, 6000);
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
+
   return (
     <div>
-      <section className="hero">
+      <section className="hero" aria-label="TELEDYNE hero">
+        <div
+          key={bgIndex}
+          className="hero-bg"
+          style={{
+            backgroundImage: `url(${heroImages[bgIndex]})`
+          }}
+        />
+        <div className="hero-overlay" />
         <div className="container hero-grid">
           <div>
             <div className="badge">Traçabilité & infrastructures IT</div>
@@ -40,13 +65,13 @@ export function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section color-block">
         <div className="container">
           <h2>Produits phares</h2>
           <p className="lead">Imprimantes, scanners, terminaux mobiles, tablettes, logiciels et consommables.</p>
           <div className="cards">
             {products.map((product) => (
-              <div key={product.slug} className="card">
+              <div key={product.slug} className="card accent-card">
                 <h3>{product.title}</h3>
                 <p>{product.description}</p>
                 <ul>
@@ -63,13 +88,13 @@ export function Home() {
         </div>
       </section>
 
-      <section className="section grey">
+      <section className="section grey tint-orange">
         <div className="container">
           <h2>Solutions sectorielles</h2>
           <p className="lead">Des cas d'usage prêts à déployer pour vos métiers.</p>
           <div className="cards">
-            {solutions.map((solution) => (
-              <div key={solution.slug} className="card">
+            {solutions.slice(0, 4).map((solution) => (
+              <div key={solution.slug} className="card accent-card">
                 <h3>{solution.title}</h3>
                 <p>{solution.description}</p>
                 <div className="pills">
@@ -85,16 +110,21 @@ export function Home() {
               </div>
             ))}
           </div>
+          <div className="cta-row">
+            <Link className="btn btn-primary" to="/solutions">
+              Explorer toutes les solutions
+            </Link>
+          </div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section highlight-blue">
         <div className="container">
           <h2>Services</h2>
           <p className="lead">Support, maintenance, conseil et accompagnement terrain.</p>
           <div className="cards">
             {services.map((service) => (
-              <div key={service.title} className="card">
+              <div key={service.title} className="card accent-card">
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
                 <Link className="btn btn-primary" to="/services">
@@ -134,33 +164,6 @@ export function Home() {
                 </Link>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section grey">
-        <div className="container two-col">
-          <div>
-            <h2>Contact</h2>
-            <p className="lead">Parlez-nous de votre projet de traçabilité ou d'impression.</p>
-            <div className="form-grid">
-              <input placeholder="Nom" />
-              <input placeholder="Email professionnel" />
-              <input placeholder="Entreprise" />
-              <input placeholder="Téléphone" />
-              <textarea placeholder="Votre besoin"></textarea>
-            </div>
-            <button className="btn btn-primary" style={{ marginTop: '14px' }}>
-              Envoyer
-            </button>
-          </div>
-          <div>
-            <h2>Newsletter</h2>
-            <p className="lead">Recevez nos guides, fiches produits et invitations webinaires.</p>
-            <div className="search-box">
-              <input placeholder="Votre email" />
-              <button className="btn btn-secondary">S'inscrire</button>
-            </div>
           </div>
         </div>
       </section>

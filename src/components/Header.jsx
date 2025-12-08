@@ -4,19 +4,39 @@ import { navLinks } from '../data/content';
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
 
-  const renderDropdown = (title, links, root) => (
-    <div className="nav-item">
-      <Link to={root}>{title}</Link>
-      <div className="submenu">
-        {links.map((link) => (
-          <Link key={link.to} to={link.to} onClick={() => setMenuOpen(false)}>
-            {link.label}
-          </Link>
-        ))}
+  const renderDropdown = (key, title, links, root) => {
+    const isOpen = openDropdown === key;
+
+    return (
+      <div
+        className={`nav-item ${isOpen ? 'open' : ''}`}
+        onMouseEnter={() => setOpenDropdown(key)}
+        onMouseLeave={() => setOpenDropdown(null)}
+        onBlur={(event) => {
+          if (!event.currentTarget.contains(event.relatedTarget)) {
+            setOpenDropdown(null);
+          }
+        }}
+      >
+        <Link
+          to={root}
+          aria-expanded={isOpen}
+          onFocus={() => setOpenDropdown(key)}
+        >
+          {title}
+        </Link>
+        <div className="submenu" role="menu">
+          {links.map((link) => (
+            <Link key={link.to} to={link.to} onClick={() => setMenuOpen(false)} role="menuitem">
+              {link.label}
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <header className="header">
@@ -26,8 +46,8 @@ export function Header() {
           <span>TELEDYNE</span>
         </Link>
         <nav className="nav-links">
-          {renderDropdown('Produits', navLinks.produits, '/produits')}
-          {renderDropdown('Solutions', navLinks.solutions, '/solutions')}
+          {renderDropdown('produits', 'Produits', navLinks.produits, '/produits')}
+          {renderDropdown('solutions', 'Solutions', navLinks.solutions, '/solutions')}
           <div className="nav-item">
             <Link to="/services">Services</Link>
           </div>

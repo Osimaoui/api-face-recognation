@@ -105,6 +105,13 @@ button {
   gap: 8px;
 }
 
+.nav-item.open .submenu,
+.nav-item:focus-within .submenu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 8px;
+}
+
 .submenu a {
   padding: 8px;
   border-radius: 8px;
@@ -152,8 +159,9 @@ button {
 }
 
 .hero {
-  background: linear-gradient(135deg, rgba(18, 52, 101, 0.08), rgba(249, 168, 54, 0.12));
+  position: relative;
   padding: 80px 0 60px;
+  overflow: hidden;
 }
 
 .hero-grid {
@@ -184,6 +192,27 @@ button {
 .hero p {
   color: #243b63;
   line-height: 1.5;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.65);
+  animation: fadeBg 1s ease;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(18, 52, 101, 0.82), rgba(249, 168, 54, 0.55));
+  opacity: 0.75;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .search-box {
@@ -226,6 +255,32 @@ button {
   background: var(--light);
 }
 
+.section.color-block {
+  background: linear-gradient(180deg, rgba(18, 52, 101, 0.05), rgba(249, 168, 54, 0.06));
+}
+
+.section.highlight-blue {
+  background: linear-gradient(135deg, rgba(18, 52, 101, 0.08), rgba(18, 52, 101, 0.02));
+}
+
+.tint-orange {
+  position: relative;
+}
+
+.tint-orange::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(249, 168, 54, 0.12), transparent 42%),
+    radial-gradient(circle at 80% 0%, rgba(18, 52, 101, 0.1), transparent 45%);
+  pointer-events: none;
+}
+
+.tint-orange .container {
+  position: relative;
+  z-index: 1;
+}
+
 .section h2 {
   color: var(--blue);
   margin: 0 0 16px;
@@ -251,6 +306,11 @@ button {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.accent-card {
+  border-top: 4px solid var(--orange);
+  background: linear-gradient(180deg, rgba(249, 168, 54, 0.08), white 60%);
 }
 
 .card h3 {
@@ -429,4 +489,19 @@ button {
 
 .mobile-menu a:hover {
   background: var(--light);
+}
+
+.cta-row {
+  margin-top: 22px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@keyframes fadeBg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
