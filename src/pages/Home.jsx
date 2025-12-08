@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { partners, products, references, services, solutions } from '../data/content';
 
@@ -10,6 +10,9 @@ export function Home() {
   ];
 
   const [bgIndex, setBgIndex] = useState(0);
+  const [partnerIndex, setPartnerIndex] = useState(0);
+
+  const featuredProducts = useMemo(() => products.slice(0, 4), []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -18,6 +21,14 @@ export function Home() {
 
     return () => clearInterval(interval);
   }, [heroImages.length]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPartnerIndex((current) => (current + 1) % partners.length);
+    }, 2800);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div>
@@ -70,8 +81,11 @@ export function Home() {
           <h2>Produits phares</h2>
           <p className="lead">Imprimantes, scanners, terminaux mobiles, tablettes, logiciels et consommables.</p>
           <div className="cards">
-            {products.map((product) => (
+            {featuredProducts.map((product) => (
               <div key={product.slug} className="card accent-card">
+                <div className="card-media">
+                  <img src={product.image} alt={product.title} loading="lazy" />
+                </div>
                 <h3>{product.title}</h3>
                 <p>{product.description}</p>
                 <ul>
@@ -85,6 +99,11 @@ export function Home() {
               </div>
             ))}
           </div>
+          <div className="cta-row">
+            <Link className="btn btn-secondary" to="/produits">
+              Découvrir tous les produits
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -95,6 +114,9 @@ export function Home() {
           <div className="cards">
             {solutions.slice(0, 4).map((solution) => (
               <div key={solution.slug} className="card accent-card">
+                <div className="card-media">
+                  <img src={solution.image} alt={solution.title} loading="lazy" />
+                </div>
                 <h3>{solution.title}</h3>
                 <p>{solution.description}</p>
                 <div className="pills">
@@ -139,12 +161,17 @@ export function Home() {
       <section className="section grey">
         <div className="container">
           <h2>Partenaires technologiques</h2>
-          <div className="partners">
-            {partners.map((partner) => (
-              <div key={partner} className="partner-card">
-                {partner}
-              </div>
-            ))}
+          <div className="partner-slider">
+            <div
+              className="partner-track"
+              style={{ transform: `translateX(-${partnerIndex * 220}px)` }}
+            >
+              {[...partners, ...partners].map((partner, idx) => (
+                <div key={`${partner}-${idx}`} className="partner-card">
+                  {partner}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
