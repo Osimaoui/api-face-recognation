@@ -1,0 +1,15 @@
+<svg width="320" height="90" viewBox="0 0 320 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>TELEDYNE Logo</title>
+  <rect width="320" height="90" fill="white"/>
+  <g transform="translate(10,10)">
+    <circle cx="26" cy="32" r="16" fill="#D72638"/>
+    <circle cx="72" cy="32" r="16" fill="#F5B400"/>
+    <circle cx="118" cy="32" r="16" fill="#D72638"/>
+    <g fill="#123465" opacity="0.5">
+      <circle cx="26" cy="32" r="22" fill="none" stroke="#123465" stroke-dasharray="1 5" stroke-width="6"/>
+      <circle cx="72" cy="32" r="22" fill="none" stroke="#123465" stroke-dasharray="1 5" stroke-width="6"/>
+      <circle cx="118" cy="32" r="22" fill="none" stroke="#123465" stroke-dasharray="1 5" stroke-width="6"/>
+    </g>
+    <text x="152" y="42" font-family="'Inter', 'Roboto', 'Arial', sans-serif" font-size="36" font-weight="800" fill="#123465">TELEDYNE</text>
+  </g>
+</svg>
