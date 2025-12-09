@@ -253,6 +253,25 @@ button {
   padding: 70px 0;
 }
 
+.section-products {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-products::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 10%, rgba(249, 168, 54, 0.16), transparent 35%),
+    radial-gradient(circle at 80% 20%, rgba(18, 52, 101, 0.12), transparent 40%);
+  pointer-events: none;
+}
+
+.section-products .container {
+  position: relative;
+  z-index: 1;
+}
+
 .section.grey {
   background: var(--light);
 }
@@ -261,8 +280,84 @@ button {
   background: linear-gradient(180deg, rgba(18, 52, 101, 0.05), rgba(249, 168, 54, 0.06));
 }
 
+.section-solutions {
+  background: linear-gradient(135deg, rgba(245, 247, 251, 0.9), rgba(249, 168, 54, 0.08));
+  overflow: hidden;
+  position: relative;
+}
+
+.section-solutions::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 50%, rgba(18, 52, 101, 0.08), transparent 48%);
+  pointer-events: none;
+}
+
+.section-solutions .card {
+  background: white;
+  border: 1px solid rgba(18, 52, 101, 0.06);
+}
+
 .section.highlight-blue {
   background: linear-gradient(135deg, rgba(18, 52, 101, 0.08), rgba(18, 52, 101, 0.02));
+}
+
+.section-services {
+  position: relative;
+  background: linear-gradient(135deg, #123465, #0c244f);
+  color: white;
+}
+
+.section-services h2,
+.section-services .lead {
+  color: white;
+}
+
+.section-services .card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: white;
+  backdrop-filter: blur(6px);
+}
+
+.section-services .btn-primary {
+  background: white;
+  color: var(--blue);
+  box-shadow: none;
+}
+
+.section-services .btn-primary:hover {
+  transform: translateY(-1px);
+}
+
+.section-partners {
+  background: linear-gradient(90deg, rgba(245, 247, 251, 0.9), rgba(18, 52, 101, 0.04));
+  position: relative;
+  overflow: hidden;
+}
+
+.section-partners::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(135deg, rgba(18, 52, 101, 0.06) 0, rgba(18, 52, 101, 0.06) 14px, transparent 14px,
+      transparent 28px);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.section-partners .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-references {
+  background: linear-gradient(180deg, white 0%, rgba(245, 247, 251, 0.9) 100%);
+}
+
+.section-references .reference {
+  border-left: 4px solid var(--orange);
 }
 
 .tint-orange {

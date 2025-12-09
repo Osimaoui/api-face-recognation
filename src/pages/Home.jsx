@@ -76,7 +76,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="section color-block">
+      <section className="section section-products color-block">
         <div className="container">
           <h2>Produits phares</h2>
           <p className="lead">Imprimantes, scanners, terminaux mobiles, tablettes, logiciels et consommables.</p>
@@ -107,7 +107,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="section grey tint-orange">
+      <section className="section section-solutions grey tint-orange">
         <div className="container">
           <h2>Solutions sectorielles</h2>
           <p className="lead">Des cas d'usage prêts à déployer pour vos métiers.</p>
@@ -140,7 +140,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="section highlight-blue">
+      <section className="section section-services highlight-blue">
         <div className="container">
           <h2>Services</h2>
           <p className="lead">Support, maintenance, conseil et accompagnement terrain.</p>
@@ -158,7 +158,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="section grey">
+      <section className="section section-partners grey">
         <div className="container">
           <h2>Partenaires technologiques</h2>
           <div className="partner-slider">
@@ -176,7 +176,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-references">
         <div className="container">
           <h2>Références</h2>
           <div className="references">
