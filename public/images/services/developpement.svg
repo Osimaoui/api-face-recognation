@@ -1,0 +1,17 @@
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Développement d'applications</title>
+  <desc id="desc">Icône de développement logiciel</desc>
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#123465" />
+      <stop offset="100%" stop-color="#1f74d6" />
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="144" height="144" rx="18" fill="url(#grad3)" />
+  <g fill="none" stroke="#f9a836" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M52 52h56v56H52z" />
+    <path d="M64 70l-10 10 10 10" />
+    <path d="M96 70l10 10-10 10" />
+    <path d="M80 82v8" />
+  </g>
+</svg>
