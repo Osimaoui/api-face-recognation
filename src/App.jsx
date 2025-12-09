@@ -11,6 +11,7 @@ import { ServicesPage } from './pages/ServicesPage';
 import { StaticPage } from './pages/StaticPage';
 import { SolutionsPage } from './pages/SolutionsPage';
 import { ProductsPage } from './pages/ProductsPage';
+import { PrinterPage } from './pages/PrinterPage';
 
 export function App() {
   return (
@@ -20,6 +21,7 @@ export function App() {
           <Route path="/" element={<Home />} />
 
           <Route path="/produits" element={<ProductsPage />} />
+          <Route path="/produits/imprimantes" element={<PrinterPage />} />
           <Route
             path="/produits/:slug"
             element={<CategoryPage title="Produits" collection={products} basePath="/produits" />}

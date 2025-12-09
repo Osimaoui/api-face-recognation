@@ -1356,3 +1356,225 @@ button {
     order: unset;
   }
 }
+
+/* Printer page */
+.printer-page {
+  background: linear-gradient(180deg, rgba(18, 52, 101, 0.05) 0%, rgba(18, 52, 101, 0.12) 24%, #f5f7fb 100%);
+}
+
+.hero-printer {
+  position: relative;
+  padding: 5rem 0;
+  background: url('https://images.unsplash.com/photo-1505740106531-4243f3831c78?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-printer__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(18, 52, 101, 0.75), rgba(18, 52, 101, 0.55), rgba(18, 52, 101, 0.35));
+  backdrop-filter: blur(4px);
+}
+
+.hero-printer__grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-printer__panel {
+  background: rgba(18, 52, 101, 0.85);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+  color: #e9f1ff;
+}
+
+.hero-printer__panel .stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.hero-printer__panel .stat {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f9a836;
+  display: block;
+}
+
+.printer-overview {
+  padding: 3.5rem 0;
+}
+
+.printer-overview .soft-card {
+  background: #fff;
+  border: 1px solid rgba(18, 52, 101, 0.08);
+  box-shadow: 0 12px 28px rgba(18, 52, 101, 0.08);
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.5rem;
+}
+
+.checklist li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.checklist li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #f9a836;
+  font-weight: 700;
+}
+
+.printer-offers {
+  padding: 3rem 0;
+  background: linear-gradient(180deg, #f5f7fb 0%, rgba(18, 52, 101, 0.08) 100%);
+}
+
+.offer-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.offer-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.offer-media {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+}
+
+.offer-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  height: 100%;
+}
+
+.printer-usecases {
+  padding: 3.5rem 0;
+}
+
+.usecase-frame {
+  position: relative;
+  min-height: 320px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #0f1b2f;
+}
+
+.usecase-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+
+.usecase-slide.active {
+  opacity: 1;
+}
+
+.usecase-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 20%, rgba(18, 52, 101, 0.75) 100%);
+}
+
+.usecase-caption {
+  position: relative;
+  padding: 1.5rem;
+  color: #fff;
+}
+
+.slider-dots {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #123465;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dot.active {
+  background: #f9a836;
+  border-color: #f9a836;
+}
+
+.printer-partners {
+  padding: 3rem 0 4rem;
+  background: #0f1b2f;
+  color: #e9f1ff;
+}
+
+.printer-partners .section-header h2,
+.printer-partners .section-header p,
+.printer-partners .section-header .eyebrow {
+  color: #e9f1ff;
+}
+
+.partner-slider {
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+.partner-track {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.5s ease;
+}
+
+.partner-chip {
+  min-width: 180px;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+@media (max-width: 960px) {
+  .hero-printer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-printer {
+    padding: 4rem 0 3rem;
+  }
+
+  .offer-media {
+    height: 160px;
+  }
+}
