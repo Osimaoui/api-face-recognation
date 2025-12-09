@@ -164,6 +164,15 @@ button {
   overflow: hidden;
 }
 
+.hero-content {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(6px);
+}
+
 .hero-grid {
   display: grid;
   gap: 28px;
@@ -201,15 +210,15 @@ button {
   inset: 0;
   background-size: cover;
   background-position: center;
-  filter: brightness(0.5);
+  filter: brightness(0.75);
   animation: fadeBg 1s ease;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(18, 52, 101, 0.82), rgba(18, 52, 101, 0.65));
-  opacity: 0.9;
+  background: linear-gradient(120deg, rgba(18, 52, 101, 0.6), rgba(18, 52, 101, 0.4));
+  opacity: 0.85;
 }
 
 .hero .container {

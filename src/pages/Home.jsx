@@ -42,7 +42,7 @@ export function Home() {
         />
         <div className="hero-overlay" />
         <div className="container hero-grid">
-          <div>
+          <div className="hero-content">
             <div className="badge">Traçabilité & infrastructures IT</div>
             <h1>Matériels et solutions pour vos opérations critiques</h1>
             <p>
