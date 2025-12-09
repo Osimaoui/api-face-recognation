@@ -560,15 +560,130 @@ button {
 }
 
 .footer {
-  padding: 26px 0;
-  background: var(--blue);
-  color: white;
-  margin-top: 40px;
+  margin-top: 48px;
+  background: linear-gradient(135deg, #0c1f3f, #102a56 50%, #0c1f3f);
+  color: #f8fbff;
+  padding: 48px 0 32px;
 }
 
-.footer a {
-  color: white;
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.footer-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.footer-about p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.footer-title {
+  margin: 0 0 12px;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #fcd807;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: #f8fbff;
   font-weight: 600;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.footer-links a:hover {
+  color: var(--orange);
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(252, 216, 7, 0.14);
+  border: 1px solid rgba(252, 216, 7, 0.3);
+  border-radius: 10px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.footer-social a:hover {
+  transform: translateY(-2px);
+  background: rgba(252, 216, 7, 0.24);
+}
+
+.footer-social svg {
+  width: 22px;
+  height: 22px;
+  color: #fcd807;
+  fill: currentColor;
+}
+
+.footer-newsletter .newsletter-input {
+  background: white;
+  border-radius: 12px;
+  padding: 8px 10px;
+  margin: 0 0 12px;
+}
+
+.footer-newsletter input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.footer .btn {
+  background: #fcd807;
+  color: #0c1f3f;
+  border-radius: 10px;
+  border: none;
+  padding: 12px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footer .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(252, 216, 7, 0.36);
+}
+
+.footer-bottom {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: rgba(248, 251, 255, 0.82);
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+  justify-content: center;
 }
 
 .pills {
