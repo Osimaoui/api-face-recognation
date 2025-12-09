@@ -9,6 +9,7 @@ import { ListingPage } from './pages/ListingPage';
 import { SearchPage } from './pages/SearchPage';
 import { ServicesPage } from './pages/ServicesPage';
 import { StaticPage } from './pages/StaticPage';
+import { SolutionsPage } from './pages/SolutionsPage';
 
 export function App() {
   return (
@@ -26,10 +27,7 @@ export function App() {
             element={<CategoryPage title="Produits" collection={products} basePath="/produits" />}
           />
 
-          <Route
-            path="/solutions"
-            element={<ListingPage title="Solutions" lead="Solutions sectorielles" items={solutions} basePath="/solutions" />}
-          />
+          <Route path="/solutions" element={<SolutionsPage />} />
           <Route
             path="/solutions/:slug"
             element={<CategoryPage title="Solutions" collection={solutions} basePath="/solutions" />}
