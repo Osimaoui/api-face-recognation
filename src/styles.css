@@ -764,6 +764,115 @@ button {
   background: linear-gradient(135deg, rgba(18, 52, 101, 0.08), rgba(249, 168, 54, 0.05));
 }
 
+.service-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(249, 168, 54, 0.25), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(18, 52, 101, 0.3), transparent 26%),
+    linear-gradient(135deg, rgba(18, 52, 101, 0.25), rgba(18, 52, 101, 0));
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.service-hero__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  position: relative;
+  z-index: 1;
+  padding: 2rem 0 1.5rem;
+}
+
+.service-hero__copy h1 {
+  max-width: 620px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  background: rgba(18, 52, 101, 0.1);
+  color: var(--blue);
+}
+
+.pill-light {
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--blue);
+  box-shadow: 0 10px 30px rgba(18, 52, 101, 0.1);
+}
+
+.hero-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 1rem 0 0.5rem;
+}
+
+.hero-tags span {
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(18, 52, 101, 0.1);
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.service-hero__panel {
+  background: linear-gradient(145deg, rgba(18, 52, 101, 0.9), rgba(11, 37, 77, 0.95));
+  color: #fff;
+  border-radius: 24px;
+  padding: 1.75rem;
+  box-shadow: 0 25px 50px rgba(18, 52, 101, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: grid;
+  gap: 1.25rem;
+}
+
+.service-hero__panel .pill {
+  background: rgba(249, 168, 54, 0.15);
+  color: #fdd48a;
+}
+
+.panel-meta p {
+  margin: 0.35rem 0;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.panel-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: grid;
+  gap: 6px;
+}
+
+.stat-card strong {
+  font-size: 1.4rem;
+  letter-spacing: -0.5px;
+}
+
+.stat-card span {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
 .services-rich {
   padding: 3rem 0 4rem;
   background: linear-gradient(180deg, rgba(18, 52, 101, 0.04), rgba(245, 247, 251, 0.6));
@@ -816,6 +925,25 @@ button {
   margin-top: 2rem;
 }
 
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.section-header h2 {
+  margin: 0.1rem 0;
+}
+
+.section-lead {
+  color: var(--text);
+  max-width: 720px;
+  line-height: 1.7;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -861,6 +989,80 @@ button {
   width: 60px;
   height: 60px;
   object-fit: contain;
+}
+
+.service-card__body {
+  flex: 1;
+}
+
+.service-card__footer {
+  margin-top: auto;
+}
+
+.btn.btn-text {
+  padding: 0;
+  color: var(--blue);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.service-process {
+  margin-top: 2.5rem;
+}
+
+.process-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.75rem;
+  box-shadow: 0 18px 38px rgba(18, 52, 101, 0.12);
+  border: 1px solid rgba(18, 52, 101, 0.08);
+}
+
+.process-header h3 {
+  margin: 0.25rem 0;
+}
+
+.process-steps {
+  display: grid;
+  gap: 14px;
+  margin-top: 1rem;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 12px 10px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, rgba(18, 52, 101, 0.06), rgba(18, 52, 101, 0.01));
+}
+
+.step-index {
+  background: var(--blue);
+  color: #fff;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  box-shadow: 0 12px 22px rgba(18, 52, 101, 0.25);
+}
+
+.step h4 {
+  margin: 0 0 6px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: var(--orange);
+  font-size: 0.85rem;
+  margin: 0;
 }
 
 @keyframes bounce {
