@@ -59,7 +59,7 @@ const productHighlights = [
     title: 'Infrastructure Wi-Fi',
     description:
       'Points d’accès et gestion nouvelle génération pour une infrastructure flexible et sécurisée.',
-    cta: '/produits',
+    cta: '/produits/infrastructure-wi-fi',
     image:
       'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1600&q=80',
     align: 'left',

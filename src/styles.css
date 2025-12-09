@@ -1565,6 +1565,120 @@ button {
   letter-spacing: 0.2px;
 }
 
+/* Generic product detail pages */
+.product-detail-page {
+  background: linear-gradient(180deg, rgba(18, 52, 101, 0.04) 0%, #f5f7fb 100%);
+}
+
+.hero-product {
+  position: relative;
+  padding: 4.5rem 0;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-product__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(18, 52, 101, 0.8), rgba(18, 52, 101, 0.62), rgba(18, 52, 101, 0.45));
+  backdrop-filter: blur(2px);
+}
+
+.hero-product__content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.hero-product__panel {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  padding: 1.5rem;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
+.hero-product__tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.product-detail__intro {
+  padding: 3rem 0;
+}
+
+.accent-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.accent-list li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.65rem;
+  color: #123465;
+  font-weight: 600;
+}
+
+.accent-list li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: #f9a836;
+  font-weight: 800;
+}
+
+.product-detail__offers {
+  padding: 3rem 0;
+  background: #fff;
+}
+
+.product-detail__usecases {
+  padding: 3rem 0;
+}
+
+.product-detail__partners {
+  padding: 3rem 0 4rem;
+  background: #0f1b2f;
+  color: #e9f1ff;
+}
+
+.product-detail__partners .section-header h2,
+.product-detail__partners .section-header p,
+.product-detail__partners .section-header .eyebrow {
+  color: #e9f1ff;
+}
+
+.partner-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.partner-chip.dark {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+@media (max-width: 960px) {
+  .hero-product__content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-product {
+    padding: 3.5rem 0;
+  }
+}
+
 @media (max-width: 960px) {
   .hero-printer__grid {
     grid-template-columns: 1fr;
