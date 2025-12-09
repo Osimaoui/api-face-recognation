@@ -1225,3 +1225,134 @@ button {
     opacity: 0.8;
   }
 }
+
+/* Products page */
+.products-page {
+  background: radial-gradient(circle at 20% 20%, rgba(18, 52, 101, 0.08), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(249, 168, 54, 0.08), transparent 25%),
+    var(--neutral-100);
+}
+
+.hero-products {
+  background: linear-gradient(120deg, #123465 0%, #1f4c89 60%, #123465 100%);
+  color: #fff;
+  padding-bottom: 4rem;
+}
+
+.hero-products__grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+}
+
+.hero-products__intro h1 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.hero-products__panel {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 1.75rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.hero-products__badge {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(249, 168, 54, 0.18);
+  color: #f9a836;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.product-hero-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.product-hero-list li {
+  padding: 0.6rem 0.8rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.products-highlight {
+  padding: 3rem 0 4rem;
+}
+
+.product-highlight-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.product-highlight-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(18, 52, 101, 0.08);
+}
+
+.product-highlight-card.align-right .product-highlight-body {
+  order: 1;
+}
+
+.product-highlight-card.align-right .product-highlight-media {
+  order: 2;
+}
+
+.product-highlight-media {
+  min-height: 240px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.product-highlight-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.product-highlight-body {
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.5rem;
+  background: linear-gradient(180deg, rgba(18, 52, 101, 0.03), rgba(18, 52, 101, 0));
+}
+
+.product-highlight-body h3 {
+  margin: 0;
+  color: #123465;
+}
+
+.product-highlight-body .btn {
+  width: fit-content;
+}
+
+.product-highlight-body .card-bottom {
+  margin-top: auto;
+}
+
+@media (max-width: 960px) {
+  .hero-products__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-highlight-card.align-right .product-highlight-body,
+  .product-highlight-card.align-right .product-highlight-media {
+    order: unset;
+  }
+}
