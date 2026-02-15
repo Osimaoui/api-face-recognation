@@ -1,0 +1,17 @@
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Installation et configuration</title>
+  <desc id="desc">Icône illustrant la configuration d'équipements</desc>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#123465" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#f9a836" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="144" height="144" rx="18" fill="url(#grad)" />
+  <g fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="42" y="42" width="76" height="52" rx="8" />
+    <path d="M52 108h56" />
+    <circle cx="80" cy="68" r="12" />
+    <path d="M80 56v6l5 5" />
+  </g>
+</svg>

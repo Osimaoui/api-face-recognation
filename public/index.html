@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TELEDYNE | Traçabilité & Solutions métiers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-container">
+      <div class="brand">
+        <button class="menu-toggle" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="/" class="logo">
+          <img src="/assets/teledyne-logo.svg" alt="TELEDYNE" />
+        </a>
+        <form class="search" role="search" action="/recherche">
+          <input type="search" name="q" placeholder="Rechercher un produit ou un secteur" aria-label="Recherche" />
+          <button type="submit">Rechercher</button>
+        </form>
+      </div>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#hero">Accueil</a></li>
+          <li class="has-submenu">
+            <a href="/produits">Produits</a>
+            <div class="submenu two-columns">
+              <a href="/produits/imprimantes">Imprimantes</a>
+              <a href="/produits/scanners">Scanners</a>
+              <a href="/produits/terminaux-mobiles">Terminaux mobiles</a>
+              <a href="/produits/terminaux-embarques">Terminaux embarqués</a>
+              <a href="/produits/tablettes-industrielles">Tablettes industrielles</a>
+              <a href="/produits/logiciels">Logiciels</a>
+              <a href="/produits/consommables">Consommables</a>
+            </div>
+          </li>
+          <li class="has-submenu">
+            <a href="/solutions">Solutions</a>
+            <div class="submenu two-columns">
+              <a href="/solutions/industrie">Industrie</a>
+              <a href="/solutions/distribution">Distribution</a>
+              <a href="/solutions/sante">Santé</a>
+              <a href="/solutions/logistique">Logistique</a>
+              <a href="/solutions/banque">Banque</a>
+              <a href="/solutions/services-publics">Services publics</a>
+              <a href="/solutions/gestion-des-inventaires">Gestion des inventaires</a>
+            </div>
+          </li>
+          <li><a href="/services">Services</a></li>
+          <li class="has-submenu">
+            <a href="/a-propos">A-propos</a>
+            <div class="submenu">
+              <a href="/a-propos/qui-sommes-nous">Qui sommes-nous</a>
+              <a href="/a-propos/carrieres">Carrières</a>
+              <a href="/contact">Contactez-nous</a>
+            </div>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero section reveal">
+      <div class="container hero-content">
+        <div>
+          <p class="eyebrow">Traçabilité & performance</p>
+          <h1>Solutions professionnelles pour la distribution de matériels informatiques</h1>
+          <p class="lead">TELEDYNE accompagne l'industrie, la logistique, la santé et la distribution avec une gamme complète d'imprimantes, scanners et terminaux robustes.</p>
+          <div class="cta-group">
+            <a class="btn primary" href="/produits">Découvrir les produits</a>
+            <a class="btn ghost" href="/solutions">Voir les solutions</a>
+          </div>
+          <div class="badges">
+            <span>Support national</span>
+            <span>Maintenance & réparation</span>
+            <span>Expertise sectorielle</span>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="card-header">
+            <h3>Recherche rapide</h3>
+            <p>Filtrez par secteur ou par type d'équipement.</p>
+          </div>
+          <form class="filters" action="/recherche">
+            <label>
+              Secteur
+              <select name="secteur">
+                <option value="">Choisir</option>
+                <option>Industrie</option>
+                <option>Logistique</option>
+                <option>Santé</option>
+                <option>Distribution</option>
+              </select>
+            </label>
+            <label>
+              Type de produit
+              <select name="produit">
+                <option value="">Choisir</option>
+                <option>Imprimantes</option>
+                <option>Scanners</option>
+                <option>Terminaux mobiles</option>
+                <option>Tablettes industrielles</option>
+              </select>
+            </label>
+            <button type="submit" class="btn primary full">Lancer la recherche</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="produits" class="section bg-light reveal">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Gamme complète</p>
+            <h2>Produits TELEDYNE</h2>
+            <p>Des matériels sélectionnés pour leur fiabilité et leur performance en environnement exigeant.</p>
+          </div>
+          <a class="btn ghost" href="/produits">Voir tous les produits</a>
+        </div>
+        <div class="grid cards">
+          <article class="card">
+            <div class="icon-circle">🖨️</div>
+            <h3>Imprimantes & étiqueteuses</h3>
+            <p>Thermiques, codes-barres, RFID : traçabilité sans faille sur vos flux logistiques.</p>
+            <div class="tags"><span>RFID</span><span>4" & 6"</span></div>
+            <a class="link" href="/produits/imprimantes">Découvrir</a>
+          </article>
+          <article class="card">
+            <div class="icon-circle">📡</div>
+            <h3>Scanners & lecteurs</h3>
+            <p>Lecture 1D/2D ultra-rapide, mains-libres ou mobiles pour les environnements intensifs.</p>
+            <div class="tags"><span>1D/2D</span><span>IP65</span></div>
+            <a class="link" href="/produits/scanners">Découvrir</a>
+          </article>
+          <article class="card">
+            <div class="icon-circle">📱</div>
+            <h3>Terminaux mobiles</h3>
+            <p>Terminaux Android durcis, connectés, prêts pour vos applications métiers.</p>
+            <div class="tags"><span>Android</span><span>4G/5G</span></div>
+            <a class="link" href="/produits/terminaux-mobiles">Découvrir</a>
+          </article>
+          <article class="card">
+            <div class="icon-circle">🖥️</div>
+            <h3>Terminaux embarqués & tablettes</h3>
+            <p>Solutions embarquées pour véhicules et tablettes industrielles haute résistance.</p>
+            <div class="tags"><span>Véhicules</span><span>Industriel</span></div>
+            <a class="link" href="/produits/terminaux-embarques">Découvrir</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions" class="section reveal">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Cas d'usage</p>
+            <h2>Solutions sectorielles</h2>
+            <p>Des flux optimisés pour chaque secteur : de la réception à l'expédition.</p>
+          </div>
+          <a class="btn ghost" href="/solutions">Explorer les secteurs</a>
+        </div>
+        <div class="grid cards">
+          <article class="card">
+            <h3>Industrie</h3>
+            <p>Gestion d'atelier, traçabilité des lots, contrôle qualité.</p>
+            <ul class="bullet-list">
+              <li>Suivi des OF</li>
+              <li>Impression d'étiquettes résistantes</li>
+              <li>Connectivité MES/ERP</li>
+            </ul>
+            <a class="link" href="/solutions/industrie">Voir la solution</a>
+          </article>
+          <article class="card">
+            <h3>Logistique</h3>
+            <p>Préparation de commandes, traçabilité colis, gestion des quais.</p>
+            <ul class="bullet-list">
+              <li>Lecture mains-libres</li>
+              <li>Terminaux embarqués</li>
+              <li>Optimisation WMS</li>
+            </ul>
+            <a class="link" href="/solutions/logistique">Voir la solution</a>
+          </article>
+          <article class="card">
+            <h3>Santé</h3>
+            <p>Traçabilité patient, pharmacie, laboratoire.</p>
+            <ul class="bullet-list">
+              <li>Hygiène & désinfection</li>
+              <li>Impression bracelets</li>
+              <li>Mobiles sans fil</li>
+            </ul>
+            <a class="link" href="/solutions/sante">Voir la solution</a>
+          </article>
+          <article class="card">
+            <h3>Distribution</h3>
+            <p>Inventaires magasin, click & collect, traçabilité des stocks.</p>
+            <ul class="bullet-list">
+              <li>Scanning rapide</li>
+              <li>Etiquetage prix</li>
+              <li>Applications mobiles</li>
+            </ul>
+            <a class="link" href="/solutions/distribution">Voir la solution</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section bg-light reveal">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Accompagnement</p>
+            <h2>Services TELEDYNE</h2>
+            <p>Support technique, réparation, maintenance préventive et conseil projet.</p>
+          </div>
+          <a class="btn ghost" href="/services">Voir tous les services</a>
+        </div>
+        <div class="grid cards three">
+          <article class="card">
+            <h3>Support & hotline</h3>
+            <p>Assistance à distance, diagnostic et prise en main sécurisée.</p>
+            <a class="link" href="/services#support">En savoir plus</a>
+          </article>
+          <article class="card">
+            <h3>Réparation & maintenance</h3>
+            <p>Centres agréés, contrats de maintenance, pièces d'origine.</p>
+            <a class="link" href="/services#maintenance">En savoir plus</a>
+          </article>
+          <article class="card">
+            <h3>Conseil & intégration</h3>
+            <p>Audit terrain, paramétrage WMS/ERP, déploiement clé en main.</p>
+            <a class="link" href="/services#conseil">En savoir plus</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="partenaires" class="section reveal">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Écosystème</p>
+            <h2>Partenaires & fabricants</h2>
+            <p>Des marques reconnues pour la robustesse et la performance.</p>
+          </div>
+          <div class="carousel-controls" aria-label="Contrôle carrousel">
+            <button class="btn ghost small" data-carousel="prev">◀</button>
+            <button class="btn ghost small" data-carousel="next">▶</button>
+          </div>
+        </div>
+        <div class="carousel" role="list">
+          <div class="partner-card" role="listitem">Zebra Technologies</div>
+          <div class="partner-card" role="listitem">Honeywell</div>
+          <div class="partner-card" role="listitem">Datalogic</div>
+          <div class="partner-card" role="listitem">Panasonic Toughbook</div>
+          <div class="partner-card" role="listitem">Sato</div>
+          <div class="partner-card" role="listitem">TSC</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="references" class="section bg-light reveal">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Références</p>
+            <h2>Cas d'usage</h2>
+            <p>Des projets menés avec succès chez nos clients.</p>
+          </div>
+        </div>
+        <div class="grid cards">
+          <article class="card">
+            <h3>Logistique — 3PL</h3>
+            <p>Déploiement de terminaux embarqués et WMS interfacé pour 12 entrepôts.</p>
+            <a class="link" href="/solutions/logistique">Consulter</a>
+          </article>
+          <article class="card">
+            <h3>Santé — CHU</h3>
+            <p>Traçabilité patient complète avec bracelets imprimés et scanners sanitaires.</p>
+            <a class="link" href="/solutions/sante">Consulter</a>
+          </article>
+          <article class="card">
+            <h3>Industrie — Automotive</h3>
+            <p>Etiquetage RFID pour suivi de production et contrôle qualité temps réel.</p>
+            <a class="link" href="/solutions/industrie">Consulter</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Restons en contact</p>
+          <h2>Parlez-nous de votre projet</h2>
+          <p>Nos experts vous accompagnent pour définir les équipements et solutions adaptés.</p>
+          <ul class="contact-list">
+            <li>Support technique & maintenance</li>
+            <li>Audit et conseil en traçabilité</li>
+            <li>Essais terrain & démonstrations</li>
+          </ul>
+        </div>
+        <form class="contact-form" action="/contact" method="post">
+          <label>Nom complet<input type="text" name="name" required></label>
+          <label>Email professionnel<input type="email" name="email" required></label>
+          <label>Secteur<select name="sector"><option>Industrie</option><option>Logistique</option><option>Santé</option><option>Distribution</option><option>Autre</option></select></label>
+          <label>Message<textarea name="message" rows="4" placeholder="Décrivez votre besoin"></textarea></label>
+          <button class="btn primary full" type="submit">Envoyer</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="newsletter" class="section bg-light reveal">
+      <div class="container newsletter">
+        <div>
+          <p class="eyebrow">Newsletter</p>
+          <h2>Recevez nos actualités produits</h2>
+          <p>Promotions, fiches pratiques, cas d'usage : une fois par mois.</p>
+        </div>
+        <form class="newsletter-form" action="/newsletter" method="post">
+          <input type="email" name="email" placeholder="Votre email professionnel" required>
+          <button class="btn primary" type="submit">S'inscrire</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <img src="./assets/teledyne-logo.svg" alt="TELEDYNE" class="footer-logo" />
+        <p>Distribution de matériels informatiques et solutions de traçabilité pour les secteurs exigeants.</p>
+      </div>
+      <div>
+        <h4>Produits</h4>
+        <ul>
+          <li><a href="/produits/imprimantes">Imprimantes</a></li>
+          <li><a href="/produits/scanners">Scanners</a></li>
+          <li><a href="/produits/terminaux-mobiles">Terminaux mobiles</a></li>
+          <li><a href="/produits/terminaux-embarques">Terminaux embarqués</a></li>
+          <li><a href="/produits/tablettes-industrielles">Tablettes industrielles</a></li>
+          <li><a href="/produits/logiciels">Logiciels</a></li>
+          <li><a href="/produits/consommables">Consommables</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="/solutions/industrie">Industrie</a></li>
+          <li><a href="/solutions/distribution">Distribution</a></li>
+          <li><a href="/solutions/sante">Santé</a></li>
+          <li><a href="/solutions/logistique">Logistique</a></li>
+          <li><a href="/solutions/banque">Banque</a></li>
+          <li><a href="/solutions/services-publics">Services publics</a></li>
+          <li><a href="/solutions/gestion-des-inventaires">Gestion des inventaires</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Entreprise</h4>
+        <ul>
+          <li><a href="/a-propos/qui-sommes-nous">Qui sommes-nous</a></li>
+          <li><a href="/a-propos/carrieres">Carrières</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/services">Services</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footnote">
+      <p>© TELEDYNE — Traçabilité, conseil et maintenance.</p>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
